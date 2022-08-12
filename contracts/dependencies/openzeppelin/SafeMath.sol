@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: agpl-3.0
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 /// @title Optimized overflow and underflow safe math operations
 /// @notice Contains methods for doing math operations that revert on overflow or underflow for minimal gas cost
@@ -10,7 +10,7 @@ library SafeMath {
   /// @return z The sum of x and y
   function add(uint256 x, uint256 y) internal pure returns (uint256 z) {
     unchecked {
-      require((z = x + y) >= x);
+      require((z = x + y) >= x, " ");
     }
   }
 
@@ -20,7 +20,7 @@ library SafeMath {
   /// @return z The difference of x and y
   function sub(uint256 x, uint256 y) internal pure returns (uint256 z) {
     unchecked {
-      require((z = x - y) <= x);
+      require((z = x - y) <= x," ");
     }
   }
 
@@ -45,7 +45,7 @@ library SafeMath {
   /// @return z The product of x and y
   function mul(uint256 x, uint256 y) internal pure returns (uint256 z) {
     unchecked {
-      require(x == 0 || (z = x * y) / x == y);
+      require(x == 0 || (z = x * y) / x == y, " ");
     }
   }
 
