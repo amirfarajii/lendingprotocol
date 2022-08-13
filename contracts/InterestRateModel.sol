@@ -5,7 +5,7 @@ abstract contract InterestRateModel{
 
     bool public constant IS_INTRESTRATEMODEL = true;
 
-    function getBarrowRate(uint cash, uint barrows, uint reserves) virtual external view returns(uint);
+    function getBorrowRate(uint cash, uint borrows, uint reserves) virtual external view returns(uint);
 
     function getSupplyRate(uint cash, uint barrows, uint reserves, uint reservesFactoryMantinssa) virtual external view returns(uint);
 
