@@ -3,7 +3,7 @@ pragma solidity ^0.8.15;
 
 /*
 ** 14 August 2022
-** forket from FraxLend
+** push to github
 */
 
 import "./interfaces/IRateCalculator.sol";
